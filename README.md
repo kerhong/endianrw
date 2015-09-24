@@ -9,6 +9,9 @@ Heavily influenced by [byteorder](https://github.com/BurntSushi/byteorder), but 
 ## License
 MIT
 
+## Documentation
+[https://kerhong.github.io/endianrw](https://kerhong.github.io/endianrw)
+
 ## Examples
 ### Read
 ``` rust

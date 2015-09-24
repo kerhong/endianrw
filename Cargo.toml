@@ -3,5 +3,6 @@ name = "endianrw"
 version = "0.1.0"
 authors = ["Kerhong <edgars.baduns@gmail.com>"]
 repository = "https://github.com/kerhong/endianrw"
+documentation = "https://kerhong.github.io/endianrw"
 license = "MIT"
 readme = "README.md"
