@@ -2,6 +2,8 @@
 name = "endianrw"
 version = "0.1.0"
 authors = ["Kerhong <edgars.baduns@gmail.com>"]
+description = "Reading and writing numbers with specific endianness"
+keywords = ["endian"]
 repository = "https://github.com/kerhong/endianrw"
 documentation = "https://kerhong.github.io/endianrw"
 license = "MIT"
