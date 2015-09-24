@@ -22,10 +22,10 @@
 //! let val = 0x01234567;
 //! let mut data: Vec<u8> = vec![0; 4];
 //! (&mut data[..]).write_as::<BigEndian, u32>(val).unwrap();
-//! assert_eq!(0x01, data[0]);
+//! assert_eq!(&[0x01, 0x23, 0x45, 0x67], &data[..]);
 //!
 //! (&mut data[..]).write_as::<LittleEndian, u32>(val).unwrap();
-//! assert_eq!(0x67, data[0]);
+//! assert_eq!(&[0x67, 0x45, 0x23, 0x01], &data[..]);
 //! ```
 
 use std::io;
@@ -178,11 +178,9 @@ mod test {
                     let val = (&expected[0..$typesize]).read_as::<$order, $typename>().unwrap();
                     assert_eq!($value, val);
                     // Test writing
-                    let mut buf: Vec<u8> = vec![0; 8];
+                    let mut buf: Vec<u8> = vec![0; $typesize];
                     (&mut buf[0..$typesize]).write_as::<$order, $typename>($value).unwrap();
-                    for i in 0..$typesize {
-                        assert_eq!(expected[i], buf[i]);
-                    }
+                    assert_eq!(&expected[..$typesize], &buf[..]);
                 }
             };
         }
