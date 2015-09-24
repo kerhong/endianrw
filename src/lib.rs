@@ -8,7 +8,7 @@
 //! # Examples
 //! ```
 //! // Read
-//! use endian::{BigEndian, LittleEndian, EndianReadExt};
+//! use endianrw::{BigEndian, LittleEndian, EndianReadExt};
 //!
 //! let data: Vec<u8> = vec![0x01, 0x23, 0x45, 0x67];
 //!
@@ -17,7 +17,7 @@
 //! ```
 //! ```
 //! // Write
-//! use endian::{BigEndian, LittleEndian, EndianWriteExt};
+//! use endianrw::{BigEndian, LittleEndian, EndianWriteExt};
 //!
 //! let val = 0x01234567;
 //! let mut data: Vec<u8> = vec![0; 4];

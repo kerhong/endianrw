@@ -1,5 +1,6 @@
 [package]
-name = "endian"
+name = "endianrw"
 version = "0.1.0"
 authors = ["Kerhong <edgars.baduns@gmail.com>"]
+repository = "https://github.com/kerhong/endianrw"
 license = "MIT"
