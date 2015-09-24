@@ -5,6 +5,7 @@ Rust library for reading and writing numbers with specific endianness.
 Heavily influenced by [byteorder](https://github.com/BurntSushi/byteorder), but with more generic API.
 
 [![Build Status](https://img.shields.io/travis/kerhong/endianrw.svg)](https://travis-ci.org/kerhong/endianrw)
+[![Crates.io](https://img.shields.io/crates/v/endianrw.svg)](https://crates.io/crates/endianrw)
 
 ## License
 MIT
