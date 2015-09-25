@@ -1,6 +1,13 @@
 
 language: rust
 
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+
 rust:
   - nightly
   - beta
@@ -22,6 +29,7 @@ script:
 
 after_success:
   - travis-cargo --only stable doc-upload
+  - travis-cargo coveralls --no-sudo
 
 env:
   global:
