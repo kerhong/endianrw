@@ -181,6 +181,11 @@ mod test {
                     let mut buf: Vec<u8> = vec![0; $typesize];
                     (&mut buf[0..$typesize]).write_as::<$order, $typename>($value).unwrap();
                     assert_eq!(&expected[..$typesize], &buf[..]);
+                    // Read from too few bytes
+                    (&expected[0..$typesize - 1]).read_as::<$order, $typename>().unwrap_err();
+                    // Write to too few bytes
+                    let mut buf: Vec<u8> = vec![0; $typesize];
+                    (&mut buf[0..$typesize - 1]).write_as::<$order, $typename>($value).unwrap_err();
                 }
             };
         }
