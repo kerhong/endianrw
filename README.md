@@ -6,6 +6,7 @@ Heavily influenced by [byteorder](https://github.com/BurntSushi/byteorder), but 
 
 [![Build Status](https://img.shields.io/travis/kerhong/endianrw.svg)](https://travis-ci.org/kerhong/endianrw)
 [![Crates.io](https://img.shields.io/crates/v/endianrw.svg)](https://crates.io/crates/endianrw)
+[![Coveralls.io](https://img.shields.io/coveralls/kerhong/endianrw.svg)](https://coveralls.io/github/kerhong/endianrw)
 
 ## License
 MIT
