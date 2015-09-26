@@ -56,7 +56,7 @@ pub enum BigEndian {}
 pub enum LittleEndian {}
 
 /// Network byte order
-pub type NetworkByteOrder = LittleEndian;
+pub type NetworkByteOrder = BigEndian;
 #[cfg(target_endian = "little")]
 pub type NativeByteOrder = LittleEndian;
 #[cfg(target_endian = "big")]
