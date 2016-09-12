@@ -1,6 +1,6 @@
 [package]
 name = "endianrw"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Kerhong <edgars.baduns@gmail.com>"]
 description = "Reading and writing numbers with specific endianness"
 keywords = ["endian"]
