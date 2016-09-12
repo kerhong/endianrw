@@ -31,8 +31,11 @@
 use std::io;
 use std::mem::transmute;
 
-trait AsSlice<T>: AsRef<[T]> + AsMut<[T]> {}
-impl<T, V: AsRef<[T]> + AsMut<[T]>> AsSlice<T> for V {}
+mod detail {
+    pub trait AsSlice<T>: AsRef<[T]> + AsMut<[T]> {}
+    impl<T, V: AsRef<[T]> + AsMut<[T]>> AsSlice<T> for V {}
+}
+use detail::AsSlice;
 
 /// Tranform primitive types to and from buffer.
 pub trait ByteTransform<T> {
